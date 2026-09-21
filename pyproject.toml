@@ -15,5 +15,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "dvc[gdrive]>=3.67.1",
     "nbstripout>=0.9.1",
+    "pyopenssl>=24.0.0",
 ]
