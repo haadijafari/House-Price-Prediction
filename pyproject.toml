@@ -9,8 +9,10 @@ dependencies = [
     "matplotlib>=3.11.2",
     "numpy>=2.5.3",
     "pandas>=3.0.6",
+    "python-dotenv>=1.2.3",
     "scikit-learn>=1.9.1",
     "seaborn>=0.13.2",
+    "streamlit>=1.64.0",
 ]
 
 [dependency-groups]
@@ -18,4 +20,16 @@ dev = [
     "dvc[gdrive]>=3.67.1",
     "nbstripout>=0.9.1",
     "pyopenssl>=24.0.0",
+    "pytest>=9.1.1",
 ]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B"]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"*.ipynb" = ["F401", "E402", "E501"]
